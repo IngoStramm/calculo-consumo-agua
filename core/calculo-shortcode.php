@@ -187,7 +187,7 @@ function calculadora_front_end() {
 
 							<?php if( !$tem_no_carrinho ) : ?>
 
-								<tr class="woocommerce-cart-form__cart-item lista-produtos-item" data-ml="<?php echo $ml; ?>" data-prod-id="<?php echo $post_id; ?>" id="produto-<?php echo $product_id; ?>">
+								<tr class="woocommerce-cart-form__cart-item lista-produtos-item" data-ml="<?php echo $ml; ?>" data-prod-id="<?php echo $post_id; ?>" id="produto-<?php echo $post_id; ?>">
 
 									<td class="product-thumbnail">
 										<?php
