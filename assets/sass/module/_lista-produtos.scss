@@ -1,0 +1,48 @@
+.lista-produtos {
+	display: none;
+	.consumo-mensal-exibicao {
+		font-weight: bold;
+		font-size: 22px;
+	}
+	.litros {
+		font-weight: bold;
+	}
+	.lista-produtos-item {
+		.lista-produtos-item-figure {
+			display: block;
+			margin: 0 0 40px;
+			overflow: hidden;
+			.lista-produtos-item-figure-img {
+				display: block;
+				width: 100%;
+				margin: auto;
+			}
+		}
+		.lista-produtos-item-titulo {
+			display: block;
+			margin: 0 0 20px;
+			text-align: center;
+		}
+		.lista-produtos-item-btn {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.lista-produtos {
+		.lista-produtos-item {
+			.lista-produtos-item-titulo {
+				text-align: left;
+			}
+			.lista-produtos-item-btn {
+				display: inline-block;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

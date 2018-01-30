@@ -1,0 +1,29 @@
+.calculadora-consumo-wrapper {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	.calculadora-consumo-overlay {
+		display: none;
+		z-index: 1000; 
+		border: none; 
+		margin: 0px; 
+		padding: 0px; 
+		width: 100%; 
+		height: 100%; 
+		top: 0px; 
+		left: 0px; 
+		background: rgb(255, 255, 255); 
+		opacity: 0.6; 
+		cursor: wait; 
+		position: absolute;
+		.calculadora-consumo-overlay-processing {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.consumo-preenchido-wrapper {
+		font-weight: bold;
+		font-size: 22px;
+	}
+}
