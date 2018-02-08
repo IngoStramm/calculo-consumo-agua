@@ -29,6 +29,13 @@
 			margin-right: auto;
 		}
 	}
+	.shop_table {
+		.product-name {
+			a {
+				color: $verde;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
