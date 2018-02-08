@@ -114,7 +114,7 @@ function calculadora_front_end() {
 										if ( ! $product_permalink ) {
 											echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
 										} else {
-											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
+											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" style="color: #008285 !important;">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
 										}
 
 										// Meta data
@@ -205,7 +205,7 @@ function calculadora_front_end() {
 										if ( ! $url ) :
 											echo $nome . '&nbsp;';
 										else :
-											echo '<a href="' . $url . '">' . $nome . '</a>';
+											echo '<a href="' . $url . '" style="color: #008285 !important;">' . $nome . '</a>';
 										endif;
 										?>
 
