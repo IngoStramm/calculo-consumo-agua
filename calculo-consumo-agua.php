@@ -4,7 +4,7 @@
 * Plugin URI: https://convertefacil.com.br/
 * Text Domain: calculo-consumo-agua
 * Description: Plugin para Cálculo de Consumo de Água do site do Aguaboa.
-* Version: 1.1.0
+* Version: 1.1.1
 * Author: Ingo Stramm
 * Author URI: https://convertefacil.com.br/
 * License: Parte integrante do sistema ConverteFácil, não pode ser comercializado separadamente.
