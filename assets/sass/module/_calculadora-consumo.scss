@@ -22,8 +22,207 @@
 			width: 100%;
 		}
 	}
+	.calculadora-consumo-wrapper-pre {
+		background: $branco url(../images/bg-agua-footer.jpg) repeat-x center bottom;
+		-webkit-background-size: contain;
+		background-size: contain;
+		
+	}
+	.calculadora-consumo-wrapper-pos {
+		background: $branco url(../images/bg-agua-header.jpg) repeat-x center top;
+		-webkit-background-size: contain;
+		background-size: contain;
+		
+	}
+	.calculo-content-pre {
+		display: block;
+	}
+	.calculo-content-pos {
+		display: none;
+	}
+	.aguaboinha-wrapper {
+		position: relative;
+		.baloes {
+			text-align: right;
+			.balao {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 1;
+			}
+		}
+		.aguaboinha {
+			display: block;
+			margin: auto;
+			margin-top: 80px;
+			max-width: 100%;
+		}
+	}
 	.consumo-preenchido-wrapper {
 		font-weight: bold;
 		font-size: 22px;
+	}
+	.calculadora-consumo-wrapper-title {
+		font-size: 40px;
+		color: $verde;
+		font-weight: bold;
+		text-align: center;
+	}
+	.calculadora-consumo-wrapper-text {
+		font-size: 18px;
+		color: $cinza;
+		text-align: center;
+	}
+
+	.calculadora-wrapper-form-control,
+	.calculadora-wrapper-btn {
+		display: inline-block;
+		vertical-align: middle;
+		@include radius(5px);
+	}
+
+	.calculadora-wrapper-form-control {
+		max-width: 180px;
+		margin: 0 10px 0;
+		color: $cinza;
+		text-align: center;
+		font-size: 14px;
+		border: solid 2px $cinza;
+	}
+
+	.calculadora-wrapper-form-control:active,
+	.calculadora-wrapper-form-control:hover,
+	.calculadora-wrapper-form-control:focus,
+	.calculadora-wrapper-form-control:hover:focus {
+		color: $cinza;
+	}
+
+	.calculadora-wrapper-btn {
+		margin: 0;
+		font-weight: lighter;
+		font-size: 14px;
+	}
+
+	.calculadora-wrapper-btn-center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.consumo-mensal-wrapper {
+		display: block;
+		margin: 0 auto 20px;
+		border: $cinza 2px dashed;
+		text-align: center;
+		font-size: 50px;
+		color: $cinza;
+		@include radius(10px);
+	}
+
+	.calculadora-consumo-wrapper-icon {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+	}
+
+	.calculadora-form {
+		text-align: center;
+	}
+	
+	.lista-produtos-table {
+		border-collapse:separate;
+	    border-spacing:0 10px;
+		thead {
+			color: $branco;
+			text-transform: capitalize;
+			font-size: 26px;
+			font-weight: lighter;
+			th {
+				font: inherit !important;
+				border: none !important;
+			}
+		}
+		tbody {
+			tr {
+				border: $cinza 1px solid;
+				margin-bottom: 20px;
+				background: $branco;
+				td {
+					background: $branco;
+					margin-bottom: 10px;
+					padding: 20px 10px;
+					border-top: solid 1px $cinza;
+					border-bottom: solid 1px $cinza;
+					&:first-child {
+						padding-left: 20px;
+						border-top-left-radius: 10px;
+						border-bottom-left-radius: 10px;
+						border-top: solid 1px $cinza;
+						border-left: solid 1px $cinza;
+						border-bottom: solid 1px $cinza;
+					}
+					&:last-child {
+						padding-right: 20px;
+						border-top-right-radius: 10px;
+						border-bottom-right-radius: 10px;
+						border-top: solid 1px $cinza;
+						border-right: solid 1px $cinza;
+						border-bottom: solid 1px $cinza;
+					}
+				}
+			}
+		}
+		.product-name {
+			font-size: 20px;
+		}
+		.porcentagem-ml {
+			font-size: 29px;
+		}
+	}
+	.calculadora-consumo-wrapper-sidebar {
+		display: block;
+		margin: auto;
+		padding: 20px;
+		border: $verde solid 2px;
+		text-align: center;
+		font-size: 23px;
+		color: $verde;
+		background: $branco;
+		@include radius(10px);
+	}
+
+	.calculadora-consumo-wrapper-sidebar-btn {
+		float: none;
+		display: inline-block;
+		padding: 20px 40px;
+		margin: 20px auto;
+		font-weight: lighter;
+		font-size: 26px;
+		text-transform: none;
+		@include radius(10px);
+	}
+
+	.calculadora-consumo-wrapper-sidebar-horizontal {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.calculadora-consumo-wrapper {
+		.lista-produtos-table {
+			.product-thumbnail {
+				min-width: 130px;
+			}
+		}
+		.calculadora-consumo-wrapper-sidebar {
+			margin-top: 86px;
+		}
+		.calculadora-consumo-wrapper-sidebar-horizontal {
+			display: flex;
+			align-content: center;
+			align-items: center;
+			margin-top: 0;
+			
+		}
 	}
 }

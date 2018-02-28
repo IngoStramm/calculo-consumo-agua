@@ -4,7 +4,7 @@ jQuery( function( $ ) {
 			var calc_form = $( this );
 			var btn_submit = calc_form.find( '.btn-submit' );
 			var ajaxurl = calc_form.attr( 'data-ajax-url' );
-			$( '.btn-submit' ).click(function(e){
+			$( '.calcular-btn' ).click(function(e){
 				e.preventDefault();
 				$( '.calculadora-consumo-overlay' ).show();
 				// var email = calc_form.find( '#email' ).val();
@@ -25,8 +25,8 @@ jQuery( function( $ ) {
 	                    $( '#consumo-mensal-total' ).val( data.consumo_mensal ).change();
 	                    $( '#consumo-mensal-exibicao' ).text( data.consumo_mensal_em_lt_exibicao ).change();
 	                    calcula_porcentagem_consumo_agua();
-	                    $( '.calculadora-form' ).hide();
-	                    $( '.lista-produtos' ).show();
+	                    $( '.calculo-content-pre' ).hide();
+	                    $( '.calculo-content-pos' ).show();
 					} else {
 						console.log( 'Status: ' + data.status );
 						console.log( 'Erro: ' + data.msg_error );
@@ -122,7 +122,7 @@ jQuery( function( $ ) {
 					});
 		        }
 
-			}); // $(.lista-produtos-item-btn).click
+			}); // $$( '.input-text.qty.text' ).change
 		};
 
 
@@ -135,14 +135,9 @@ jQuery( function( $ ) {
 				var valor_exibicao = arredonda_1_casa( valor );
 				$( '.consumo-preenchido' ).text( String( valor_exibicao ).replace( '.', ',') ) ;
 				if( valor >= 100 ) {
-					$( '.calculo-mensagem-alerta' ).hide();
-					$( '.calculo-mensagem-ok' ).show();
 					$('html, body').animate({
 					        scrollTop: $( '#btn-finaliza-calculo' ).offset().top
 					    }, 2000);
-				} else {
-					$( '.calculo-mensagem-ok' ).hide();
-					$( '.calculo-mensagem-alerta' ).show();
 				}
 			});
 		};
@@ -150,8 +145,8 @@ jQuery( function( $ ) {
 		var recalcular_btn = function() {
 			$(' .recalcular-btn' ).click(function(e){
 				e.preventDefault();
-				$( '.lista-produtos' ).hide();
-				$( '.calculadora-form' ).show();
+				$( '.calculo-content-pos' ).hide();
+				$( '.calculo-content-pre' ).show();
 			}); // $(.recalcular-btn).click
 		};
 
